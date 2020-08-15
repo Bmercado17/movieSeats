@@ -1,0 +1,17 @@
+body {
+    background-color: rgba(109, 104, 97, 0.4);
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+    body {
+        background-color: rgba(77, 216, 88, .4);
+    }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    body {
+        background-color: rgba(241, 237, 100, .5);
+    }
+}
