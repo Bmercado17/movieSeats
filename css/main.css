@@ -1,5 +1,11 @@
 body {
     background-color: rgba(109, 104, 97, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* On screens that are 992px or less, set the background color to blue */
@@ -12,6 +18,68 @@ body {
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
     body {
-        background-color: rgba(241, 237, 100, .5);
+        background-color: rgba(241, 237, 100, .6);
     }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.movie-container {
+    margin: 20px 0;
+
+}
+
+.movie-container select {
+    background-color: rgb(204, 195, 195);
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.seat {
+    background-color: black;
+    height: 14px;
+    width: 17px;
+    margin: 4px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    /* box-shadow: 3px 3px 5px 1.5px #ccc; */
+}
+
+.seat.selected {
+    background-color: lightseagreen;
+}
+
+.seat.occupied {
+    background-color: white;
+}
+
+.seat:nth-of-type(2) {
+    margin-right: 20px;
+}
+
+.seat:nth-last-of-type(2) {
+    margin-left: 20px;
+
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.4)
+}
+
+.row {
+    display: flex;
+}
+
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1)
 }
