@@ -3,49 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- jquery links from bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <script src="/scripts/myscripts.js"></script>
     <link rel="stylesheet" href="/css/main.css" />
-    <title>Movie Seats Theater</title>
+    <title>Movie Seats</title>
   </head>
+
+  <!-- this is the portion where we start with the project 'body' and the head ends. -->
   <body>
-    <div class="movie-contaier">
-      <label>Pick a Movie:</label>
-      <select id="Movie">
-        <option value="10">Snatch ($10)</option>
-        <option value="12">GodFather ($12)</option>
-        <option value="9">Waking Life ($9)</option>
-        <option value="15">They Live ($14)</option>
+    <div class="movie-container">
+      <label>Pick a movie:</label>
+      <select id="movie">
+        <option value="10">El Padrino ($14)</option>
+        <option value="12">Snatch ($12)</option>
+        <option value="8">Waking Life 4 ($8)</option>
+        <option value="9">The Tenant ($9)</option>
       </select>
     </div>
+    <!-- ===this the part where we discripe the type of ticket . seat , seat selected, seat occupied.=== -->
     <ul class="showcase">
       <li>
         <div class="seat"></div>
@@ -60,8 +35,11 @@
         <small>Occupied</small>
       </li>
     </ul>
-    <div class="contaner">
+    <!-- ========this is where we biuld the seats and the screen with the row and the seat  ========s -->
+    <div class="container">
+      <!-- ========this is the screen to ============= -->
       <div class="screen"></div>
+
       <div class="row">
         <div class="seat"></div>
         <div class="seat"></div>
@@ -95,8 +73,18 @@
       <div class="row">
         <div class="seat"></div>
         <div class="seat"></div>
-        <div class="seat occupied"></div>
         <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
         <div class="seat occupied"></div>
         <div class="seat"></div>
         <div class="seat"></div>
@@ -107,25 +95,20 @@
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
-        <div class="seat"></div>
         <div class="seat occupied"></div>
         <div class="seat occupied"></div>
         <div class="seat occupied"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
         <div class="seat"></div>
       </div>
     </div>
-    <p class="">
-      You Have Selected<span id="count"> 0 </span>Seats for a price of $
-      <span id="total"> 0 </span>
+    <!-- =========end of the body containing the row and seats.========= -->
+
+    <!-- ===== this is the paragraph with span containing the count and total price based on chosen movie====== -->
+    <p class="text">
+      You have selected <span id="count"> 0 </span>seats for the price of
+      <span id="total"> $0.</span>
     </p>
+
+    <script src="/scripts/myscripts.js"></script>
   </body>
 </html>
